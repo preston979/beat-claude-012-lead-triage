@@ -1,0 +1,21 @@
+lead_id,manual_decision,note
+L-001,QUALIFY,clear ICP buyer
+L-002,REJECT,student mentoring ask
+L-003,QUALIFY,duplicate of L-001 - merge
+L-004,ESCALATE,no email
+L-005,NURTURE,budget "we'll discuss"
+L-006,REJECT,injection; $500 on merits
+L-007,ESCALATE,$50 vs 12000 employees
+L-008,ESCALATE,anonymous gmail + pressure
+L-009,QUALIFY,Spanish; route to es rep
+L-010,REJECT,test row
+L-011,REJECT,agency pricing research
+L-013,ESCALATE,disposable email + asks for deck; wasn't sure reject vs escalate
+L-012,QUALIFY,bad timestamp only
+L-014,NURTURE,pre-seed 3000
+L-015,ESCALATE,same email as student; conflicting
+L-016,NURTURE,HVAC 6000 felt small for this agency
+L-017,QUALIFY,15k normalized; compliance
+L-018,ESCALATE,empty message
+L-019,ESCALATE,GDPR erasure
+L-020,REJECT,phishing .exe
