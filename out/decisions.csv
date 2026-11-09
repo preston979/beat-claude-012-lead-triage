@@ -1,0 +1,21 @@
+lead_id,decision,confidence,reason,flags
+L-001,QUALIFY,0.85,"Named company with a site, stated need, budget $25,000/mo at or above the $5,000 floor.",
+L-002,REJECT,0.85,"Student asking for career mentoring; no company or budget. Send the public resources reply, not a sales follow-up.",
+L-003,QUALIFY,0.9,Same email and company as L-001: merge into that record (adds SEO interest). Do not open a second opportunity.,duplicate of L-001
+L-004,ESCALATE,0.7,"No email on the form; company, site and budget look real. Human finds a contact via the website before anything is sent.",
+L-005,NURTURE,0.65,Budget not stated ('we'll discuss'); real company and clear use case. Send the pricing explainer and offer a discovery call.,"budget not numeric: ""we'll discuss"""
+L-006,REJECT,0.9,"Message contains instructions aimed at the triage system; treated as data and ignored. On its merits: budget $500 is below the $5,000 floor and no business need is stated.",security: manipulation attempt
+L-007,ESCALATE,0.6,Enterprise-scale company but budget field says $50. Likely a typo or a units mismatch; human confirms before scoping.,
+L-008,ESCALATE,0.6,"Personal email, no company named, large budget and pressure to sign this week. Unverifiable; human checks identity (LinkedIn) before any proposal.",
+L-009,QUALIFY,0.85,"Named company with a site, stated need, budget $18,000/mo at or above the $5,000 floor. Spanish-language lead: route to a Spanish-speaking rep.",language: es
+L-010,REJECT,0.98,"Test/garbage submission (placeholder name, email and message).",
+L-011,REJECT,0.75,"Asks for pricing structure / methodology on behalf of 'a client of ours' or from a disposable address: agency research, not a buyer. Polite decline; reconsider if they return from a corporate email with a real need.",
+L-012,QUALIFY,0.75,"Named company with a site, stated need, budget $9,000/mo at or above the $5,000 floor. Timestamp is invalid (form bug), lead itself is fine.",submitted_at invalid: '2026-13-45T99:99:00Z'
+L-013,REJECT,0.75,"Asks for pricing structure / methodology on behalf of 'a client of ours' or from a disposable address: agency research, not a buyer. Polite decline; reconsider if they return from a corporate email with a real need.",
+L-014,NURTURE,0.85,"Legit company but budget $3,000/mo is below the $5,000 floor. Start light / revisit at the stated timeline.",
+L-015,ESCALATE,0.6,Same email as L-002 but a different story (that record was REJECT: student/no company; now a business with budget). Conflicting signals; a human verifies before replying.,conflicts with L-002
+L-016,QUALIFY,0.7,"Named company with a site, stated need, budget $6,000/mo at or above the $5,000 floor. Message arrived as raw HTML; cleaned. Smaller local-service account.",html in message (stripped)
+L-017,QUALIFY,0.85,"Named company with a site, stated need, budget $15,000/mo at or above the $5,000 floor. Regulated industry: compliance review on all copy.",budget normalized from '15k'; constraint: compliance review
+L-018,ESCALATE,0.5,Empty message with a real domain and budget; intent unknown. Human sends a one-line 'what are you looking for?'.,
+L-019,ESCALATE,0.95,"Data-subject request (GDPR Art. 17), not a lead. Route to privacy owner; 30-day clock; do not enrich or store further.",
+L-020,REJECT,0.95,Message pushes an executable download with an 'overdue invoice' pretext. Phishing pattern. Do not click; forward to security.,security: phishing link
